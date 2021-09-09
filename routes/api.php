@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
@@ -21,13 +22,18 @@ use App\Http\Controllers\FactureController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
+
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+
+Route::middleware('auth:api')->group( function(){
 Route::resource('/user', 'App\Http\Controllers\UserController');
 Route::resource('/admin', 'App\Http\Controllers\AdminController');
 Route::resource('/client', 'App\Http\Controllers\ClientController');
 Route::apiResource('/role', 'App\Http\Controllers\RoleController');
-Route::apiResource('/cantine', 'App\Http\Controllers\CantineController');
 Route::apiResource('/facture', 'App\Http\Controllers\FactureController');
+});
+Route::apiResource('/cantine', 'App\Http\Controllers\CantineController');

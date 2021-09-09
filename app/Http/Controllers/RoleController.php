@@ -16,7 +16,13 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return response()->json(Role::paginate(10), 200);
+        $role = Role::paginate(1);
+        // try {
+        //     $role  = auth()->userOrFail();
+        // } catch(\Tymon\JWTAuth\Exceptions\UserNotDeinedException $e) {
+        //     return \response()->json(['error' => $e->getMessage()]);
+        // }
+        return response()->json($role, 200);
     }
 
     /**
