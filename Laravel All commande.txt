@@ -1,0 +1,118 @@
+Laravel All commande
+create a new project => laravel new projectName,  composer create-project --prefer-dist laravel/laravel projectName
+Authentification
+[
+    make a first migration in the db => php artisan migrate;
+    make a laravel/ui => composer require laravel/ui --dev;
+    auth page => php artisan ui bootstrap --auth
+]
+create entity => php artisan make:migration todo
+migration status => php artisan migrate:status
+create model =>  php artisan make:model Todo
+create seeder =>  php artisan make:seeder TodoSeeder
+migrate the seeder => php artisan db:seed 
+Updating table column => php artisan make:migration add_date_of_car_to_cars_table --table=cars
+Clear cache =>  php artisan cache:clear
+create factory => php artisan make:factory TodoFactory --model=Todo
+Create a controller => php artisan make:controller -r TodoController
+Make a notification => composer require yoeunes/notify
+
+Tailwind CSS installer => composer require laravel-frontend-presets/tailwindcss --dev
+Auth page with tailwind => php artisan ui tailwindcss --auth
+Remove the mix of laravel => npm remove laravel-mix
+Install laravel-mix => npm install laravel-mix --save-dev
+Install Cross-env => npm install cross-env --save-dev
+To send a mail => php artisan make:mail SendMail -m
+Parcking => [login => "syllamamadou811@gmail.com" password => "passer123"]
+
+
+
+                                Authentification JWT AUTH with token
+Documentation JWT Auth Laraevel => https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+Bundle tymon/jwt-auth => composer require tymon/jwt-auth:1.0.0-rc3
+Make a jwt secret key => php artisan jwt:secret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZECC XPerience
+il y a 2 semaines
+Chéri nfathieko : chéri , mon père m’a a dit 
+Mbamussuko : ma mère m’a dit 
+Mbademaw ko : mes proches / toute ma          famille m’a dit 
+Ni dung ma taa : Si tu ne m’avait épousé
+N’né dung bé saa : j’allais mourir 
+Ko n’né ka taa : comme tu m’a épousé 
+Sayaa ba koo : alors La mort m’a tourné le dos
